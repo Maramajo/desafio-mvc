@@ -31,18 +31,96 @@ Este projeto foi desenvolvido como parte de um **teste técnico**. A proposta co
 ```bash
 git clone https://github.com/Maramajo/desafio-mvc.git
 cd desafio-mvc
+```
+
 ### 3️⃣ Criar e subir os containers
+
+```bash
 docker-compose up --build
+```
 
 Isso irá construir e subir todos os serviços definidos no docker-compose.yml:
 
-Kafka (kafka:29092)
+- Kafka (kafka:29092)
+- Zookeeper (zookeeper:2181)
+- PostgreSQL (postgres:5432)
+- Backend (http://localhost:8081)
+- Frontend (http://localhost)
 
-Zookeeper (zookeeper:2181)
+---
 
-PostgreSQL (postgres:5432)
+## 🧭 Fluxo de Interação entre os Componentes
 
-Backend (http://localhost:8081)
+```
+[Navegador do Usuário]
+         │
+         ▼
+[ Front-end Angular ]
+         │ HTTP
+         ▼
+[ Back-end Spring Boot ]
+         │ REST + Kafka + RDB
+         ▼
+[ Apache Kafka ]
+         │
+         ▼
+[ Outros consumidores ou logs futuros ]
+```
 
-Frontend (http://localhost)
+---
 
+## 📁 Estrutura do Projeto
+
+```
+desafio-mvc/
+├── back-end/               # API Spring Boot
+│   ├── Dockerfile
+│   └── src/...
+├── front-end/              # Aplicação Angular
+│   ├── Dockerfile
+│   └── src/...
+├── db/
+│   └── init.sql            # Script SQL para inicializar o banco
+├── docker-compose.yml      # Orquestração de todos os serviços
+└── README.md
+```
+
+---
+
+## 🧪 Scripts úteis
+
+### Compilar o backend (manual)
+
+```bash
+cd back-end
+mvn clean package
+```
+
+### Build do frontend (manual)
+
+```bash
+cd front-end
+npm install
+ng build --configuration production
+```
+
+---
+
+## ✅ Funcionalidades
+
+- 📌 Cadastro e consulta de créditos
+- 📌 Envio de eventos de crédito para Kafka
+- 📌 Interface web limpa e funcional
+- 📌 Integração completa via Docker
+
+---
+
+## 📬 Contato
+
+José Maria Costa Teixeira  
+🔗 https://www.linkedin.com/in/jose-teixeira-672ba3b/  
+📧 Email: [teixeira.j.mc@hotmail.com]
+
+---
+
+⚠️ Este projeto é voltado para demonstração técnica e pode ser ajustado conforme os requisitos da vaga.
