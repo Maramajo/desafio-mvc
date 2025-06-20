@@ -1,0 +1,7 @@
+com\desafio\demo\config\CorsConfig.class
+com\desafio\demo\service\CreditoKafkaConsumer.class
+com\desafio\demo\DesafioApplication.class
+com\desafio\demo\model\Credito.class
+com\desafio\demo\repository\CreditoRepository.class
+com\desafio\demo\service\CreditoService.class
+com\desafio\demo\controller\CreditoController.class

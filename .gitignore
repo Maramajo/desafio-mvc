@@ -1,0 +1,33 @@
+# Java/Spring Boot
+back-end/target/
+*.jar
+*.war
+.m2/
+*.log
+*.txt
+*.backup
+*.class
+*.docx
+*.zip
+
+
+# Angular/Node
+front-end/node_modules/
+front-end/dist/
+*.log
+*.txt
+*.backup
+*.docx
+*.zip
+
+# Docker
+*.env
+docker-compose.override.yml
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Outros
+*.DS_Store
