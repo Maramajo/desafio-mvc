@@ -73,7 +73,7 @@ Isso irá construir e subir todos os serviços definidos no docker-compose.yml:
 
 ```
 desafio-mvc/
-├── back-end/               # API Spring Boot
+├── back-end/               # API Spring Boot/kafka/PostgreSQL
 │   ├── Dockerfile
 │   └── src/...
 ├── front-end/              # Aplicação Angular
