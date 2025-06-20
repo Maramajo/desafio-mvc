@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como parte de um **teste técnico**. A proposta co
 ## 🔧 Tecnologias Utilizadas
 
 - ✅ **Backend**: Java 11, Spring Boot, Spring Data JPA, Apache Kafka
-- ✅ **Frontend**: Angular 12, Node 14,TypeScript
+- ✅ **Frontend**: Angular 12, Node 14, TypeScript
 - ✅ **Banco de Dados**: PostgreSQL 15
 - ✅ **Mensageria**: Apache Kafka + Zookeeper
 - ✅ **Containerização**: Docker + Docker Compose
