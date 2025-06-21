@@ -94,6 +94,7 @@ desafio-mvc/
 ```bash
 cd back-end
 mvn clean package
+docker build -t desafio-backend:latest .
 ```
 
 ### Build do frontend (manual)
@@ -102,6 +103,7 @@ mvn clean package
 cd front-end
 npm install
 ng build --configuration production
+docker build -t desafio-frontend:latest .
 ```
 
 ---
